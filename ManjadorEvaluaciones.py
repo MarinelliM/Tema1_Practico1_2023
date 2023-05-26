@@ -56,21 +56,7 @@ class ManejaEvaluaciones:
                 mf.mostrar(dni)
                 a=len(self.__lista)
             else: a+=1
-    
-    # def Ac(self,mf):
-    #     i = 0
-    #     while i < len(self.__lista):
-    #         if self.__lista[i].getestilo() == 'L':
-    #             print('Participo en estilo libre:')
-    #             dni = self.__lista[i].getdni()
-    #             mf.buscarpordni(dni)
-    #             i+=1
-    #         elif self.__lista[i].getestilo() == 'E':
-    #             print('Participo en estilo escuela:')
-    #             dni = self.__lista[i].getdni()
-    #             mf.buscarpordni(dni)
-    #             i+=1
-
+   
     def Ac(self,mf):
         i = 0
         a = 0
@@ -87,7 +73,6 @@ class ManejaEvaluaciones:
                 a = 0
             else: i+=1
                 
-    
     def Ad(self):
         dni = int(input('Ingrese dni:'))
         estilo = str(input('Ingrese estilo:'))
