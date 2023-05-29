@@ -39,24 +39,15 @@ class ManejaEvaluaciones:
             else: i+=1
 
     def Ab(self,mf):
-        i = 0
-        max = -1
-        while i < len(self.__lista):
-            promedio = self.__lista[i].calcularpuntaje()
-            if promedio > max:
-                max = promedio
-                i+=1
-            else: i+=1
-        a = 0
-        while a < len(self.__lista):
-            if self.__lista[a] > (max-0.1):
-                estilo = str(self.__lista[a].getestilo())
-                print('Estilo: {}'.format(estilo))
-                dni = self.__lista[a].getdni()
-                mf.mostrar(dni)
-                a=len(self.__lista)
-            else: a+=1
-   
+        self.__lista.sort(reverse=True)
+        self.test()
+        print('\n')
+        print('Patinador:')
+        dni = self.__lista[0].getdni()
+        mf.buscarpordni(dni)
+        prom = self.__lista[0].calcularpuntaje()
+        print('Mejor puntaje: {:.2}' .format(prom))
+        
     def Ac(self,mf):
         i = 0
         a = 0
