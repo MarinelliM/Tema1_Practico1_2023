@@ -36,7 +36,7 @@ class Evaluacion:
         return promedio
 
     def __gt__(self,otro):
-        return self.calcularpuntaje() > otro
+        return self.calcularpuntaje() > otro.calcularpuntaje()
     
     def mostrar(self):
         print('Dni: {}, Estilo: {}, Puntaje 1, 2 y 3: |{}|'.format(self.getdni(),self.getestilo(),self.getpuntajes()))
