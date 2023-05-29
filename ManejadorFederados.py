@@ -40,6 +40,9 @@ class ManejaFederados:
             else: i += 1
 
     def buscarpordni(self,dni):
-        for e in range(len(self.__lista)):
+        e = 0
+        while e < len(self.__lista):
             if dni == self.__lista[e].getdni():
                 self.__lista[e].mostrar()
+                e = len(self.__lista)
+            else: e+=1
